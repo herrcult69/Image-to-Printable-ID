@@ -22,3 +22,4 @@ canvas.pack(pady= 20)
 canvas.bind("<B1-Motion>", drag)
 
 root.mainloop()
+""" Message to self, tomorrow, add 4 round widgets and move them, if mouse coords are near a round dot, drag it """
