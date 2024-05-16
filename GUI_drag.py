@@ -62,18 +62,26 @@ class GUI:
     def quadrilateral(self, x, y):
         point_1 = Point(x - 100, y - 100)
         p1 = point_1.make_point(self.canvas)
-        point_2 = Point(x + 100, y + 100)
+        point_2 = Point(x + 100, y - 100)
         p2 = point_2.make_point(self.canvas)
-        point_3 = Point(x + 100, y - 100)
+        point_3 = Point(x - 100, y + 100)
         p3 = point_3.make_point(self.canvas)
-        point_4 = Point(x - 100, y + 100)
+        point_4 = Point(x + 100, y + 100)
         p4 = point_4.make_point(self.canvas)
         return {"names": [point_1, point_2, point_3, point_4], "points": [p1, p2, p3, p4]}
 
 if __name__ == "__main__":
     root = Tk()
-    gui = GUI(root, "saves/ori.png")
-    img = PIL.Image.open("saves/ori.png")
+    img = "inputs/ori.png"
+    gui = GUI(root, img)
+    img = PIL.Image.open(img)
     w, h = img.size
     root.geometry(f"{w + 100}x{h + 100}")
     root.mainloop()
+    coords =gui.quadrilateral_shape["names"]
+    x1, y1 = coords[0].x, coords[0].y
+    x2, y2 = coords[1].x, coords[1].y
+    x3, y3 = coords[2].x, coords[2].y
+    x4, y4 = coords[3].x, coords[3].y
+    print((x1, y1), (x2, y2), (x3, y3), (x4, y4))
+    

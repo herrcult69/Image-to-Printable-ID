@@ -1,9 +1,7 @@
 import cv2
 import numpy as np
 
-image = cv2.imread("inputs/unwarp.jpg")
-# ul82-133; bl228-681; br1005-501; ur863-0
-# 204 x 323
+image = cv2.imread("inputs/ori.png")
 height = 204
 width = 323
 points_1 = np.array([[82, 133], [863,0],
