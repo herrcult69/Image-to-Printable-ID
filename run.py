@@ -1,8 +1,7 @@
 import cv2
-import numpy as np
 import PIL.Image
 from tkinter import *
-from GUI_drag import Point, GUI
+from GUI_drag import GUI
 from perwarp import warp_perspective
 
 def main():
@@ -16,7 +15,7 @@ def main():
     w, h = img.size
     root.geometry(f"{w + 100}x{h + 100}")
     root.mainloop()
-    coords = gui.quadrilateral_shape["names"]
+    coords = gui.quadrilateral_corners["names"]
     
     
     image = cv2.imread("inputs/ori.png")
