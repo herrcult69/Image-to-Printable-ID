@@ -17,7 +17,7 @@ def main():
     app = ImageRotator(root_1)
     root_1.mainloop()
     path = app.path
-    
+
     if not path:
         messagebox.showerror("Error", "No Image Found.")
         sys.exit("No Image Found")
@@ -33,7 +33,7 @@ def main():
     image = cv2.imread(path)
     new_image = warp_perspective(image, coords, width, height)
     cv2.imshow("new_image", new_image)
-    #Auto close after 3 seconds
+    # Auto close after 3 seconds
     key = cv2.waitKey(3000)
     if key == 27:
         cv2.destroyAllWindows()

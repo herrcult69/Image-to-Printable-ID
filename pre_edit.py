@@ -2,6 +2,7 @@ from tkinter import *
 import PIL.Image, PIL.ImageTk
 import tkinter.messagebox as messagebox
 
+
 class ImageRotator:
     def __init__(self, root):
         self.root = root
@@ -23,6 +24,7 @@ class ImageRotator:
         self.image = None
         self.tk_image = None
         self.root.geometry("800x600")
+
     def load_image(self):
         # Get the image path from the entry widget
         path = self.path_entry.get()
@@ -35,7 +37,7 @@ class ImageRotator:
             self.image = PIL.Image.open(path)
             self.path = path
             w, h = self.image.size
-            print(w,h)
+            print(w, h)
             self.tk_image = PIL.ImageTk.PhotoImage(self.image)
             self.root.geometry(f"{w}x{h}")
             # Display image
@@ -55,6 +57,7 @@ class ImageRotator:
         else:
             messagebox.showerror("Error", "No Image Found.")
             return
+
     def save_image(self):
         if self.image:
             width, height = self.image.size
@@ -68,11 +71,13 @@ class ImageRotator:
         else:
             messagebox.showerror("Error", "No Image Found.")
             return
+
     def resize_image(self, width, height, max_width, max_height):
         scale_factor = min(max_width / width, max_height / height)
         new_width = width * scale_factor
         new_height = height * scale_factor
         return self.image.resize((int(new_width), int(new_height)), PIL.Image.LANCZOS)
+
 
 if __name__ == "__main__":
     root = Tk()
