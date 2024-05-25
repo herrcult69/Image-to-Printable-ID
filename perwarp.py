@@ -13,7 +13,7 @@ def warp_perspective(img, points_objs:list, rwidth= None, rheight= None):
     warped = np.array([[0, 0], [rwidth, 0],
                      [0, rheight], [rwidth, rheight]], dtype= np.float32)
     tranform_mat = cv2.getPerspectiveTransform(unwarp, warped)
-    return cv2.warpPerspective(img, tranform_mat, (rwidth, rheight))
+    return cv2.warpPerspective(img, tranform_mat, (rwidth, rheight), flags=cv2.INTER_LANCZOS4)
 
 
 

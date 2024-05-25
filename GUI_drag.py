@@ -1,5 +1,5 @@
 from tkinter import *
-import PIL.Image
+import PIL.Image, PIL.ImageTk
 class Point:
     def __init__(self, x, y):
         self.x = x
@@ -18,16 +18,17 @@ class Line:
         return line
 class GUI:
     def __init__(self, root, img):
-        self.img = img
+        self.path = img
         self.root = root
-        self.w, self.h = PIL.Image.open(self.img).size
-        self.img = PhotoImage(file=self.img)
+        self.image = PIL.Image.open(self.path)
+        self.w, self.h = self.image.size
+        self.image_tk = PIL.ImageTk.PhotoImage(self.image)
         self.current_point = {"name": None, "point": None, "x": None, "y": None, "linesname":None, "lines": None}
-        
-       
+        self.save_button = Button(root, text="Crop Image", command=self.crop_image)
+        self.save_button.pack()
         self.canvas = Canvas(self.root, width=self.w, height=self.h, bg= "white")
         self.canvas.pack(pady=40)
-        self.canvas.create_image(self.w/2, self.h/2, image=self.img)
+        self.canvas.create_image(self.w/2, self.h/2, image=self.image_tk)
         
         self.quadrilateral_corners = self.quadrilateral(self.w/2, self.h/2, self.canvas)
         print(self.quadrilateral_corners)
@@ -109,6 +110,8 @@ class GUI:
         l43 = line_4_3.make_line(self.canvas)
         return {"names":[(line_1_2, line_1_3), (line_1_2, line_4_2), (line_1_3, line_4_3), (line_4_2, line_4_3)],
                 "lines":[(l12, l13), (l12, l42), (l13, l43), (l42, l43)]}
+    def crop_image(self):
+        self.root.destroy()
 
 if __name__ == "__main__":
     root = Tk()
