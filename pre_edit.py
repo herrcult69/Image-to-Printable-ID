@@ -76,7 +76,7 @@ class ImageRotator:
         scale_factor = min(max_width / width, max_height / height)
         new_width = width * scale_factor
         new_height = height * scale_factor
-        return self.image.resize((int(new_width), int(new_height)), PIL.Image.LANCZOS)
+        return self.image.resize((int(new_width), int(new_height)), PIL.Image.BILINEAR)
 
 
 if __name__ == "__main__":
