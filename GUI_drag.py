@@ -150,7 +150,6 @@ class GUI:
                         event.x,
                         event.y,
                     )
-
     def quadrilateral(self, x, y, canvas):
         point_1 = Point(x - 100, y - 100)
         p1 = point_1.make_point(canvas)
@@ -191,7 +190,7 @@ class GUI:
 
 if __name__ == "__main__":
     root = Tk()
-    img = "inputs/ori.png"
+    img = "inputs/080147647.jpeg"
     gui = GUI(root, img)
     img = PIL.Image.open(img)
     w, h = img.size

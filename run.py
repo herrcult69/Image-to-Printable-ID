@@ -9,8 +9,8 @@ import sys, os
 
 
 def main():
-    height = 204
-    width = 323
+    height = 382
+    width = 606
 
     root_1 = Tk()
     root_1.title("Image Rotator")
@@ -37,7 +37,7 @@ def main():
     key = cv2.waitKey(3000)
     if key == 27:
         cv2.destroyAllWindows()
-    cv2.imwrite(f"saves/{path[15:]}", new_image)
+    cv2.imwrite(f"saves/" + app.extension, new_image)
     os.remove(path)
 
 
