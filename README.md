@@ -37,17 +37,28 @@ pip install -r requirements.txt
 
 ## Example
 ![image](https://github.com/user-attachments/assets/22c441df-761c-4f66-85e9-465e2a95c379)
-The pre-editing GUI
+
+*The pre-editing GUI
+
 ![image](https://github.com/user-attachments/assets/63ac612a-bc51-4d22-a7c1-b2915b049836)
-File Selection
+
+*File Selection
+
 ![image](https://github.com/user-attachments/assets/00713f2f-3d2e-4f40-a4f9-ac611604f768)
-Rotating
+
+*Rotating
+
 ![image](https://github.com/user-attachments/assets/ac94992c-b643-4500-85f0-a70efbe4801c)
-Magic Cropping
+
+*Magic Cropping
+
 ![image](https://github.com/user-attachments/assets/e8552255-ca5e-455d-aa63-3b08ba2d57d0)
-Magic Cropping after configuration
+
+*Magic Cropping after configuration
+
 ![image](https://github.com/user-attachments/assets/386d8ce7-2ed1-45f8-a36e-e7242817bcfc)
-Ouput file
+
+*Ouput file
 
 
 
