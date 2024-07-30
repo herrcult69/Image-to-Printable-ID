@@ -1,8 +1,8 @@
 # Image-to-Printable-ID
-
+# Video Demo: https://youtu.be/ErPeLcXz7yI
 ## Overview
 
-ID Card Image Processor is a Python-based tool designed to warp and crop images, specifically for preparing ID card photos for printing. This project ease the process of extracting an ID card from a warped image using a photo editing tool.
+Image-to-Printable-ID is a Python-based tool designed to warp and crop images, specifically for preparing ID card photos for printing. This project ease the process of extracting an ID card from a warped image using a photo editing tool.
 ## Features
 - **Image Rotating**: Adjusts the rotation of the image for easy rewarping process.
 - **Image Cropping**: Crops the image to the required dimensions for ID cards.
