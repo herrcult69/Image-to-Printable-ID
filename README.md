@@ -2,12 +2,11 @@
 
 ## Overview
 
-ID Card Image Processor is a Python-based tool designed to warp and crop images, specifically for preparing ID card photos for printing. This project ensures that images are correctly formatted and standardized for ID card production.
-
+ID Card Image Processor is a Python-based tool designed to warp and crop images, specifically for preparing ID card photos for printing. This project ease the process of extracting an ID card from a warped image using a photo editing tool.
 ## Features
-
-- **Image Warping**: Adjusts the perspective of the image to ensure proper alignment.
+- **Image Rotating**: Adjusts the rotation of the image for easy rewarping process.
 - **Image Cropping**: Crops the image to the required dimensions for ID cards.
+- **Image Warping**: Adjusts the perspective of the image to ensure proper alignment.
 - **User-Friendly Interface**: Simple and intuitive interface for easy use.
 - **High-Quality Output**: Ensures that the processed images are of high quality, suitable for printing.
 
@@ -25,22 +24,31 @@ pip install -r requirements.txt
 2. **Run the Script**: Use the following command to process your image:
 
     ```bash
-    python process_image.py --input path/to/your/image.jpg --output path/to/save/processed_image.jpg
+    python run.py
     ```
 
-3. **Parameters**:
-    - `--input`: Path to the input image.
-    - `--output`: Path to save the processed image.
+3. **Pre-Editing stage**:
+    - `Load Image`: Open the image you want to process.
+    - `Rotate Image`: Rotate the image 90 degrees if needed.
+    - `Choose image`: Submit the pre-edited image.
+3. **Magic Croping stage**:
+   - Using for individual pointers to match the corners of the ID cards
+   - `Crop image`: Submit the magic-cropped image. 
 
 ## Example
+![image](https://github.com/user-attachments/assets/22c441df-761c-4f66-85e9-465e2a95c379)
+![image](https://github.com/user-attachments/assets/f95b5e6a-393a-4afe-9332-c9d694861823)
+![image](https://github.com/user-attachments/assets/00713f2f-3d2e-4f40-a4f9-ac611604f768)
+![image](https://github.com/user-attachments/assets/ac94992c-b643-4500-85f0-a70efbe4801c)
+![image](https://github.com/user-attachments/assets/e8552255-ca5e-455d-aa63-3b08ba2d57d0)
+![image](https://github.com/user-attachments/assets/386d8ce7-2ed1-45f8-a36e-e7242817bcfc)
 
-```bash
-python process_image.py --input sample.jpg --output processed_sample.jpg
-```
+
+
 
 ## Dependencies
 
-- Python 3.x
+- Python 3.12
 - OpenCV
 - NumPy
 
@@ -54,8 +62,6 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contact
 
-For any questions or suggestions, please contact [Your Name] at [your.email@example.com].
+For any questions or suggestions, please contact herrcult69 at hoalehuynhvan@gmail.com.
 
----
 
-Feel free to customize this template to better fit your project's specifics. If you need any more details or have other questions, just let me know!
